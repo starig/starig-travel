@@ -1,11 +1,30 @@
-import styles from '../assets/styles/Home.module.scss'
 import React from "react";
 import Layout from "../app/components/common/Layout";
+import {GetStaticProps, NextPage} from "next";
+import {IPlace} from "../app/types/place";
+import SearchSection from "../app/components/elements/Home/SearchSection/SearchSection";
 
-export default function Home() {
+interface IHome {
+    places: IPlace[]
+}
+
+const Home:NextPage<IHome> = ({ places }) => {
   return (
     <Layout>
-      Home page
+        <SearchSection />
     </Layout>
   )
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+    const result = await fetch('http://localhost:3000/api/places/')
+    const places = await result.json()
+
+    return {
+        props: {
+            places
+        }
+    }
+}
+
+export default Home
