@@ -1,6 +1,6 @@
 import styles from './HeadingSection.module.scss';
 import {FC} from "react";
-import mapImage from '../../../../../assets/images/map.png';
+import mapImage from '../../../../../public/images/places/map.png';
 
 const HeadingSection: FC = () => {
     return (
@@ -10,7 +10,6 @@ const HeadingSection: FC = () => {
             <div>
                 <h1>
                     Best places for trip!
-                    test commit
                 </h1>
             </div>
         </section>
