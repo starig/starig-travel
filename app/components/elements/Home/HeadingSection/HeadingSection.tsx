@@ -1,10 +1,8 @@
-import styles from './SearchSection.module.scss';
+import styles from './HeadingSection.module.scss';
 import {FC} from "react";
-import Search from "../../Search/Search";
-import Filters from "../../Filters/Filters";
 import mapImage from '../../../../../assets/images/map.png';
 
-const SearchSection: FC = () => {
+const HeadingSection: FC = () => {
     return (
         <section className={styles.section} style={
             {backgroundImage: `url(${mapImage.src})`}
@@ -13,11 +11,9 @@ const SearchSection: FC = () => {
                 <h1>
                     Best places for trip!
                 </h1>
-                <Search/>
-                <Filters/>
             </div>
         </section>
     )
 }
 
-export default SearchSection;
+export default HeadingSection;
