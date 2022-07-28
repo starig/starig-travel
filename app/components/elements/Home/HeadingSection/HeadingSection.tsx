@@ -10,6 +10,7 @@ const HeadingSection: FC = () => {
             <div>
                 <h1>
                     Best places for trip!
+                    test commit
                 </h1>
             </div>
         </section>
