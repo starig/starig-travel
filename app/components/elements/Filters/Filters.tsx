@@ -5,45 +5,58 @@ import {IPlace} from "../../../types/place";
 import {TypeSetState} from "../../../types/common";
 
 
-const cities = [
+const countries = [
     {
-        location: 'Paris',
+        location: 'France',
     },
     {
-        location: 'Bora Bora',
+        location: 'Japan',
     },
     {
-        location: 'Maui',
+        location: 'Norway',
     },
     {
-        location: 'Tahiti',
+        location: 'Italy',
     },
     {
         location: 'Brazil',
     },
     {
-        location: 'Norway',
+        location: 'USA',
     },
 ]
 
 interface IFilters {
-    setPlaces: TypeSetState<IPlace[]>
+    setPlaces: TypeSetState<IPlace[]>;
+    initialPlaces: IPlace[];
 }
 
-const Filters: FC<IFilters> = () => {
+const Filters: FC<IFilters> = ({ setPlaces, initialPlaces }) => {
     const [filter, setFilter] = useState('')
+
+    const handleFilter = (location: string) => {
+        setFilter(location);
+
+        if (filter === location) {
+            setPlaces(initialPlaces)
+            setFilter('');
+        } else {
+            setPlaces(initialPlaces.filter(place => place.location.country.toLowerCase() === location.toLowerCase()));
+            setFilter(location)
+        }
+    }
     return (
         <div className={styles.wrapper}>
             {
-                cities.map(city => (
-                    <button onClick={() => setFilter(city.location)}
-                            key={city.location} className={cn({
-                        [styles.active]: city.location === filter
-                    })}>{city.location}</button>
+                countries.map(country => (
+                    <button onClick={() => handleFilter(country.location)}
+                            key={country.location} className={cn({
+                        [styles.active]: country.location === filter
+                    })}>{country.location}</button>
                 ))
             }
         </div>
     )
 }
 
-export default Filters;
+export default Filters
