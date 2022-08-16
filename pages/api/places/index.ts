@@ -1,7 +1,7 @@
-import {IPlace} from "../../app/types/place";
+import {IPlace} from "../../../app/types/place";
 import {NextApiRequest, NextApiResponse} from "next";
 
-const places: IPlace[] = [
+export const places: IPlace[] = [
     {
         slug: 'kyoto',
         description: 'Tokyo is a capital of great Japan!',
