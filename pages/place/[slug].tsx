@@ -2,16 +2,15 @@ import Layout from "../../app/components/common/Layout";
 import {GetStaticPaths, GetStaticProps, NextPage} from "next";
 import {API_URL} from "../../app/constants";
 import {IPlace} from "../../app/types/place";
+import Place from "../../app/components/screens/place/Place/Place";
 
 interface IPlacePage {
     post: IPlace
 }
 
-const Place: NextPage<IPlacePage> = ({post} ) => {
+const PlacePage: NextPage<IPlacePage> = ({post} ) => {
     return (
-        <Layout>
-           Place { post.slug }
-        </Layout>
+        <Place place={post}/>
     )
 }
 
@@ -32,4 +31,4 @@ export const getStaticProps: GetStaticProps = async ({params}) => {
     return {props: {post}}
 }
 
-export default Place;
+export default PlacePage;
