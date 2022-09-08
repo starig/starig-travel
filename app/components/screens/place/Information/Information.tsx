@@ -27,7 +27,6 @@ const Information: FC<{place: IPlace}> = ({place}) => {
                     <FaCalendar color={'#565656'} size={18} />
                     <span>{place.duration}</span>
                 </div>
-
             </div>
         </div>
     )

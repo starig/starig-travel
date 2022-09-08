@@ -1,10 +1,11 @@
 import Footer from "./footer/Footer";
 import {FC} from "react";
+import styles from './Layout.module.scss';
 
 const Layout: FC = (props: any) => {
     return (
         <div>
-            <div style={{maxWidth: 480, margin: '0 auto'}}>{props.children}</div>
+            <div className={styles.wrapper}>{props.children}</div>
             <Footer />
         </div>
     )
