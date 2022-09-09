@@ -1,8 +1,4 @@
-
-
 .wrapper {
-  display: grid;
-  justify-items: center;
-  max-width: 480px;
   margin: 0 auto;
+  height: calc(100% - 70px);
 }

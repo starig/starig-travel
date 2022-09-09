@@ -2,6 +2,7 @@ import React, {FC} from 'react';
 import {IPlace} from "../../../../types/place";
 import styles from './Information.module.scss';
 import {FaMapMarkerAlt, FaStar, FaCalendar} from 'react-icons/fa';
+import Map from './Map';
 
 
 const Information: FC<{place: IPlace}> = ({place}) => {
@@ -28,6 +29,7 @@ const Information: FC<{place: IPlace}> = ({place}) => {
                     <span>{place.duration}</span>
                 </div>
             </div>
+            <Map />
         </div>
     )
 }

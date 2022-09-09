@@ -4,6 +4,7 @@ import Layout from "../../../common/Layout";
 import Information from "../Information/Information";
 import Header from "../Header/Header";
 import BookTrip from "../BookTrip/BookTrip";
+import Wrapper from "../Wrapper/Wrapper";
 
 interface IPlacePage {
     place: IPlace
@@ -11,10 +12,12 @@ interface IPlacePage {
 
 const Place: FC<IPlacePage> = ({ place }) => {
     return (
-        <Layout>
-            <Header />
-            <Information place={place} />
-            <BookTrip />
+        <Layout isMaxWidth={false}>
+            <Wrapper imagePath={place.imagePath}>
+                <Header />
+                <Information place={place} />
+                <BookTrip />
+            </Wrapper>
         </Layout>
     )
 }
