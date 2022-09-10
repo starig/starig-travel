@@ -9,7 +9,7 @@ export const places: IPlace[] = [
             'ius dapibus ac ocurreret an nostrum eripuit nunc blandit maecenas donec feugiat persecuti tation ' +
             'primis arcu simul nihil eius alienum qualisque justo in fusce sumo splendide ea',
         distance: 10324,
-        location: {country: 'Japan', city: 'Kyoto'},
+        location: {country: 'Japan', city: 'Kyoto', regionUn: 'Asia'},
         imagePath: 'http://localhost:3000/images/places/japan.jpg',
         rating: 5,
         duration: '10 days',
@@ -23,7 +23,7 @@ export const places: IPlace[] = [
             ' mucius delicata libero quisque ea eirmod massa nisl idque fusce convenire percipit porta' +
             ' lobortis nihil possim corrumpit viderer nunc nascetur tota quem scripserit',
         distance: 9454,
-        location: {country: 'Italy', city: 'Venezia'},
+        location: {country: 'Italy', city: 'Venezia', regionUn: 'Europe'},
         imagePath: 'http://localhost:3000/images/places/italy.jpg',
         rating: 5,
         duration: '12 days',

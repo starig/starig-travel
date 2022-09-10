@@ -2,3 +2,8 @@ $accent: #EB601E;
 $gray: #807e7f;
 $bg-color: #000;
 $white: #e8e8e8;
+
+@mixin glassEffect {
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}

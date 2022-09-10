@@ -3,50 +3,66 @@
 .wrapper {
   border-radius: 15px;
   padding: 1.5rem;
-  background-color: rgba(255, 255, 255, .1);
   width: 80%;
-  margin: 3rem auto 0;
+  margin: 2rem auto 0;
+  @include glassEffect;
 
   .map {
-    height: 200px;
-    background-color: $gray;
+    /* height: 180px;
+    background-color: $gray; */
     margin-top: 1.5rem;
   }
-  
+
   .heading {
-    color: $white;
     display: flex;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
-    >h1 {
+    > h1 {
       color: $white;
-      font-size: 22px;
-      margin-left: 1rem;
+      font-size: 20px;
+      margin: 0 0 0 1rem;
     }
   }
 
-  >p {
+  > article {
     color: $white;
-    opacity: .8;
-    line-height: 1.66;
+    opacity: 0.8;
+    line-height: 1.6;
+    font-size: 0.9rem;
   }
 
   .additional {
-    margin-right: 2rem;
+    margin-top: 1rem;
     display: flex;
     align-items: center;
 
     .rating {
+      margin-right: 1.5rem;
+      display: flex;
+      align-items: center;
+      padding: 10px 15px;
+      border-radius: 30px;
+      border: 2px solid rgba(255, 255, 255, 0.04);
+
+      > span {
+        color: $white;
+        font-weight: bold;
+        margin-left: 0.5rem;
+      }
+    }
+
+    .duration {
       margin-right: 2rem;
       display: flex;
       align-items: center;
       padding: 10px 15px;
       border-radius: 30px;
-      border: 2px solid rgba(255, 255, 255, .04);
-      >span {
+      border: 2px solid rgba(255, 255, 255, 0.04);
+
+      > span {
         color: $white;
-        font-weight: 700;
+        font-weight: bold;
         margin-left: 0.5rem;
       }
     }
